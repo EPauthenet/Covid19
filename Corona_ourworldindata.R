@@ -31,7 +31,7 @@ df_rect=data.frame(x1 = as.Date(c("2020-03-25","2020-03-31"))
 
 pal = c("firebrick","orange","steelblue","grey")
 p1 = ggplot() +
-  labs(title = paste("Covid-19 deaths by countries (",df$date[length(df$date)],")",sep = ""), subtitle = "source : https://covid.ourworldindata.org") +
+  labs(title = paste("Covid-19 deaths by countries (",df$date[length(df$date)],")",sep = ""), subtitle = "source : https://covid.ourworldindata.org / Graphic : E. Pauthenet") +
   xlab("") + ylab("deaths") + ylim(0,50000) + xlim(as.Date(c("2020-01-25",df_rect$x2[2]))) + 
   theme_minimal() + theme(legend.position = "none") +
   geom_line(data = df4,aes(x = date, y = total_deaths, group = location),colour = pal[4]) +
