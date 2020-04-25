@@ -7,7 +7,7 @@ library(grid)
 
 #Load data
 url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
-destfile = "~/Documents/R/CoronaVirus/Ourworldindata/owid-covid-data.csv"
+destfile = "owid-covid-data.csv"
 download.file(url,destfile)
 df = read.csv2(destfile,header = T,sep = ",")
 df$date = as.Date(df$date)
